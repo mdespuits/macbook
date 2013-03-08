@@ -1,3 +1,6 @@
 [submodule "cookbooks/homebrew"]
 	path = cookbooks/homebrew
 	url = https://github.com/opscode-cookbooks/homebrew.git
+[submodule "cookbooks/dmg"]
+	path = cookbooks/dmg
+	url = https://github.com/opscode-cookbooks/dmg.git
