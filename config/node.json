@@ -4,7 +4,7 @@
     "recipe[homebrew]",
     "recipe[dmg::default]",
     "recipe[zip_app::default]",
-    "recipe[main]"
+    "recipe[mac-setup]"
   ],
   "homebrew_packages": [
     "ack",
