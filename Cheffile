@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'mac-setup', :path => 'vendor/cookbooks/mac-setup'
+
+cookbook 'homebrew', :git => 'https://github.com/opscode-cookbooks/homebrew'
+cookbook 'dmg', :git => 'https://github.com/opscode-cookbooks/dmg'
+cookbook 'zip_app', :git => 'https://github.com/fnichol/chef-zip_app'

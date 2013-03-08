@@ -1,0 +1,8 @@
+name             "mac-setup"
+maintainer       "Matt Bridges"
+maintainer_email "mbridges.91@gmail.com"
+license          "Apache 2.0"
+description      "Macbook Pro setup for Matt Bridges"
+version          "0.0.1"
+recipe           "mac-setup", "Setup my Macbook"
+supports         "mac_os_x"
