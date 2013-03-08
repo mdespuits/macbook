@@ -66,6 +66,7 @@ end
 
 dmg_package "Jing" do
   source "http://download.techsmith.com/jing/mac/jing.dmg"
+  accept_eula true
 end
 
 dmg_package "Virtualbox" do
