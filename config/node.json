@@ -6,7 +6,7 @@
     "recipe[zip_app]",
     "recipe[mac-setup]"
   ],
-  "homebrew_packages": [
+  "packages": [
     "ack",
     "cloc",
     "bash-completion",
