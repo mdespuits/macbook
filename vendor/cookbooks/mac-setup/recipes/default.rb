@@ -50,6 +50,10 @@ dmg_package "Sublime Text 2" do
   source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"
 end
 
+dmg_package "VLC" do
+  source "http://sourceforge.net/projects/vlc/files/latest/download"
+end
+
 dmg_package "Google Chrome" do
   dmg_name "googlechrome"
   source "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"

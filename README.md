@@ -48,6 +48,7 @@ Some apps that will be installed right away:
 * Google Chrome
 * Firefox
 * Mou.app
+* VLC
 * VirtualBox
 
 #### Note:
