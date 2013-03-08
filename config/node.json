@@ -6,6 +6,32 @@
     "recipe[zip_app]",
     "recipe[mac-setup]"
   ],
+  "zip_apps": [
+    { "name":   "Alfred",
+      "source": "http://cachefly.alfredapp.com/alfred_1.3.3_267.zip"
+    },
+    { "name":   "iTerm",
+      "source": "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"
+    },
+    { "name":   "BetterSnapTool",
+      "source": "http://boastr.de/BetterSnapToolTrial.zip"
+    },
+    { "name":   "Postgres",
+      "source": "http://postgresapp.com/download"
+    },
+    { "name":   "Github",
+      "source": "https://central.github.com/mac/latest"
+    },
+    { "name":   "Induction",
+      "source": "http://inductionapp.com/download"
+    },
+    { "name":   "Firefox",
+      "source": "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"
+    },
+    { "name":   "Mou",
+      "source": "http://mouapp.com/download/Mou.zip"
+    }
+  ],
   "packages": [
     "ack",
     "cloc",

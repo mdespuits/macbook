@@ -9,36 +9,12 @@ node["packages"].each do |package_name|
   end
 end
 
-zip_app_package "Alfred" do
-  source "http://cachefly.alfredapp.com/alfred_1.3.3_267.zip"
-end
-
-zip_app_package "iTerm" do
-  source "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"
-end
-
-zip_app_package "BetterSnapTool" do
-  source "http://boastr.de/BetterSnapToolTrial.zip"
-end
-
-zip_app_package "Postgres" do
-  source "http://postgresapp.com/download"
-end
-
-zip_app_package "Github" do
-  source "https://central.github.com/mac/latest"
-end
-
-zip_app_package "Induction" do
-  source "http://inductionapp.com/download"
-end
-
-zip_app_package "Firefox" do
-  source "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"
-end
-
-zip_app_package "Mou" do
-  source "http://mouapp.com/download/Mou.zip"
+Array(node["zip_apps"]).each do |app_name|
+  zip_app_package app_name['name'] do
+    %w[app source checksum destination zip_file].each do |attribute|
+      send(attribute, app_name[attribute]) if app_name[attribute]
+    end
+  end
 end
 
 dmg_package "Skype" do
