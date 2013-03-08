@@ -38,6 +38,7 @@ If you are not using Homebrew for your package management on a Mac, you're doing
 Some apps that will be installed right away:
 
 * Alfred
+* Sublime Text 2
 * Skype.app
 * iTerm2
 * BetterSnapTool

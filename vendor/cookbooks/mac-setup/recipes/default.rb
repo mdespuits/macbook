@@ -45,6 +45,11 @@ dmg_package "Skype" do
   source "http://www.skype.com/go/getskype-macosx.dmg"
 end
 
+dmg_package "Sublime Text 2" do
+  dmg_name "sublimetext2"
+  source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"
+end
+
 dmg_package "Google Chrome" do
   dmg_name "googlechrome"
   source "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
