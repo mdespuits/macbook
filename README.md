@@ -2,6 +2,15 @@
 
 What you are looking at is my basic Macbook Pro setup using Chef!
 
+## How do I use it?
+
+```bash
+curl -L https://github.com/mattdbridges/mac/archive/master.zip
+unzip master.zip
+cd mac-master
+./setup.sh
+```
+
 ## Homebrew. Period.
 
 If you are not using Homebrew for your package management on a Mac, you're doing it wrong.
