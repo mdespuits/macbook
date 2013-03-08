@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
 
 def run(text)
-  puts text.strip
+  puts "==> #{text.strip}"
   system text.strip
 end
 
-whoami = `whoami`.chomp
-options = {
+$options = {
   verbose: false,
   reload: ''
 }
@@ -14,31 +13,32 @@ options = {
 require 'optparse'
 optparser = OptionParser.new do |opt|
   opt.on "-c", "--clean" do
-    options[:reload] = '--clean'
+    $options[:reload] = '--clean'
   end
 
   opt.on "-v", "--[no]-verbose" do |v|
-    options[:verbose] = v
+    $options[:verbose] = v
   end
 end
 optparser.parse!
 
-begin
+def install_and_run_bundler
   run "gem install bundler"
   run "bundle"
-rescue => e
-  exit 1
-end
-
-begin
-  run "sudo mkdir -p /usr/local"
-  run "sudo chown -R #{whoami} /usr/local"
 rescue => e
   puts e.message
   exit 1
 end
 
-begin
+def prepare_for_homebrew
+  run "sudo mkdir -p /usr/local"
+  run "sudo chown -R #{`whoami`.chomp} /usr/local"
+rescue => e
+  puts e.message
+  exit 1
+end
+
+def install_gcc_for_mac_os_x
   run "mkdir -p ~/tmp"
   run "cd ~/tmp"
   run "curl https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg > GCC-10.7-v2.pkg"
@@ -46,13 +46,20 @@ begin
 rescue => e
   puts e.message
   exit 1
+ensure
+  require 'fileutils'
+  FileUtils.rm_rf "GCC-10.7-v2.pkg"
 end
 
-begin
-  run "librarian-chef install #{options[:clean]}"
+def run_librarian_and_chef
+  run "librarian-chef install #{$options[:clean]}"
   run "chef-solo -c config/solo.rb -j config/node.json"
 rescue => e
   puts e.message
   exit 1
 end
 
+install_and_run_bundler
+prepare_for_homebrew
+install_gcc_for_mac_os_x
+run_librarian_and_chef
