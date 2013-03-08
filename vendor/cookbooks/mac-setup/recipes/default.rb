@@ -64,6 +64,10 @@ dmg_package "Google Drive" do
   source "http://dl.google.com/drive/installgoogledrive.dmg"
 end
 
+dmg_package "Jing" do
+  source "http://download.techsmith.com/jing/mac/jing.dmg"
+end
+
 dmg_package "Virtualbox" do
   source "http://dlc.sun.com.edgesuite.net/virtualbox/4.0.8/VirtualBox-4.0.8-71778-OSX.dmg"
   type "mpkg"

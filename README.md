@@ -45,6 +45,7 @@ Some apps that will be installed right away:
 * Postgres.app
 * Github.app
 * Induction.app
+* Jing
 * Google Chrome
 * Google Drive
 * Firefox
