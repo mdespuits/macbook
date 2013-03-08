@@ -1,4 +1,4 @@
-# mattdbridges Mac Setup
+# Mac Setup
 
 What you are looking at is my basic Macbook Pro setup using Chef!
 
