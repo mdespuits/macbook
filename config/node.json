@@ -6,6 +6,34 @@
     "recipe[zip_app]",
     "recipe[mac-setup]"
   ],
+  "dmg_apps": [
+    { "app":   "Skype",
+      "source": "http://www.skype.com/go/getskype-macosx.dmg"
+    },
+    { "app":   "Sublime Text 2",
+      "dmg_name": "sublimetext2",
+      "source": "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"
+    },
+    { "app":   "VLC",
+      "source": "http://sourceforge.net/projects/vlc/files/latest/download"
+    },
+    { "app":   "Google Chrome",
+      "dmg_name": "googlechrome",
+      "source": "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
+    },
+    { "app":   "Google Drive",
+      "dmg_name": "googledrive",
+      "source": "http://dl.google.com/drive/installgoogledrive.dmg"
+    },
+    { "app":   "Jing",
+      "source": "http://download.techsmith.com/jing/mac/jing.dmg",
+      "accept_eula": true
+    },
+    { "app":   "Virtualbox",
+      "source": "http://dlc.sun.com.edgesuite.net/virtualbox/4.0.8/VirtualBox-4.0.8-71778-OSX.dmg",
+      "type": "mpkg"
+    }
+  ],
   "zip_apps": [
     { "name":   "Alfred",
       "source": "http://cachefly.alfredapp.com/alfred_1.3.3_267.zip"
