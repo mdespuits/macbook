@@ -4,3 +4,6 @@
 [submodule "cookbooks/dmg"]
 	path = cookbooks/dmg
 	url = https://github.com/opscode-cookbooks/dmg.git
+[submodule "cookbooks/zip_app"]
+	path = cookbooks/zip_app
+	url = https://github.com/fnichol/chef-zip_app.git
