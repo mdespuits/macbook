@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
 
-def run(text)
-  puts "==> #{text.strip}"
-  system text.strip
+def run(cmd)
+  cmd.strip!
+  puts "==> #{cmd}"
+  system cmd
 end
 
 $options = {
