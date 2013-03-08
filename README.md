@@ -5,10 +5,10 @@ What you are looking at is my basic Macbook Pro setup using Chef!
 ## How do I use it?
 
 ```bash
-curl -L https://github.com/mattdbridges/mac/archive/master.zip
-unzip master.zip
-cd mac-master
-./setup.sh
+$ curl -L https://github.com/mattdbridges/mac/archive/master.zip
+$ unzip master.zip
+$ cd mac-master
+$ ./setup.sh
 ```
 
 ## Homebrew. Period.
