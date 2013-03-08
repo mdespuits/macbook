@@ -33,6 +33,10 @@ zip_app_package "Induction" do
   source "http://inductionapp.com/download"
 end
 
+zip_app_package "Firefox" do
+  source "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"
+end
+
 dmg_package "Skype" do
   source "http://www.skype.com/go/getskype-macosx.dmg"
 end

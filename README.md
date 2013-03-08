@@ -45,6 +45,7 @@ Some apps that will be installed right away:
 * Github.app
 * Induction.app
 * Google Chrome
+* Firefox
 * VirtualBox
 
 #### Note:
