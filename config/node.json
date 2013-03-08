@@ -1,0 +1,27 @@
+{
+  "platform": "mac_os_x",
+  "run_list": [
+    "recipe[homebrew]",
+    "recipe[dmg::default]",
+    "recipe[zip_app::default]",
+    "recipe[main]"
+  ],
+  "homebrew_packages": [
+    "ack",
+    "cloc",
+    "bash-completion",
+    "git",
+    "hub",
+    "macvim",
+    "memcached",
+    "node",
+    "rbenv",
+    "rbenv-vars",
+    "ruby-build",
+    "redis",
+    "tree",
+    "the_silver_searcher",
+    "tmux",
+    "zsh"
+  ]
+}
