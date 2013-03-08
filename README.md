@@ -8,7 +8,7 @@ What you are looking at is my basic Macbook Pro setup using Chef!
 $ curl -L https://github.com/mattdbridges/mac/archive/master.zip
 $ unzip master.zip
 $ cd mac-master
-$ ./setup.sh
+$ ./bin/setup.sh
 ```
 
 ## Homebrew. Period.
