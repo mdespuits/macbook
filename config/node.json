@@ -2,8 +2,8 @@
   "platform": "mac_os_x",
   "run_list": [
     "recipe[homebrew]",
-    "recipe[dmg::default]",
-    "recipe[zip_app::default]",
+    "recipe[dmg]",
+    "recipe[zip_app]",
     "recipe[mac-setup]"
   ],
   "homebrew_packages": [
