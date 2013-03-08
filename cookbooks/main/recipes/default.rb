@@ -33,10 +33,13 @@ zip_app_package "Induction" do
   source "http://inductionapp.com/download"
 end
 
+dmg_package "Skype" do
+  source "http://www.skype.com/go/getskype-macosx.dmg"
+end
+
 dmg_package "Google Chrome" do
   dmg_name "googlechrome"
   source "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
-  action :install
 end
 
 dmg_package "Virtualbox" do
