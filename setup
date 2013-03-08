@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+def run(text)
+  puts text.strip
+  system text.strip
+end
+
+whoami = `whoami`.chomp
+options = {
+  verbose: false,
+  reload: false
+}
+verbose = false
+reload = ''
+
+require 'optparse'
+optparser = OptionParser.new do |opt|
+  opt.on "-c", "--cookbooks" do
+    options[:reload] = ' --clean'
+  end
+
+  opt.on "-v", "--[no]-verbose" do |v|
+    options[:verbose] = v
+  end
+end
+optparser.parse!
+
+begin
+  run "gem install bundler"
+  run "bundle"
+rescue => e
+  exit 1
+end
+
+begin
+  run "sudo mkdir -p /usr/local"
+  run "sudo chown -R #{whoami} /usr/local"
+rescue => e
+  puts e.message
+  exit 1
+end
+
+begin
+  run "mkdir -p ~/tmp"
+  run "cd ~/tmp"
+  run "curl https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg > GCC-10.7-v2.pkg"
+  run "sudo installer -pkg GCC-10.7-v2.pkg -target /"
+rescue => e
+  puts e.message
+  exit 1
+end
+
+begin
+  run "librarian-chef install #{reload}"
+  run "chef-solo -c config/solo.rb -j config/node.json"
+rescue => e
+  puts e.message
+  exit 1
+end
+
