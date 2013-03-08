@@ -59,6 +59,11 @@ dmg_package "Google Chrome" do
   source "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
 end
 
+dmg_package "Google Drive" do
+  dmg_name "googledrive"
+  source "http://dl.google.com/drive/installgoogledrive.dmg"
+end
+
 dmg_package "Virtualbox" do
   source "http://dlc.sun.com.edgesuite.net/virtualbox/4.0.8/VirtualBox-4.0.8-71778-OSX.dmg"
   type "mpkg"
