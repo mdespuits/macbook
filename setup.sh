@@ -5,6 +5,7 @@ set -e
 gem install bundler
 bundle
 
+# Prepare for Homebrew
 sudo mkdir -p /usr/local/
 sudo chown -R `whoami` /usr/local
 
