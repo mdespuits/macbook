@@ -46,6 +46,7 @@ Some apps that will be installed right away:
 * Induction.app
 * Google Chrome
 * Firefox
+* Mou.app
 * VirtualBox
 
 #### Note:

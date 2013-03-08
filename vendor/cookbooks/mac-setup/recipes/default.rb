@@ -37,6 +37,10 @@ zip_app_package "Firefox" do
   source "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"
 end
 
+zip_app_package "Mou" do
+  source "http://mouapp.com/download/Mou.zip"
+end
+
 dmg_package "Skype" do
   source "http://www.skype.com/go/getskype-macosx.dmg"
 end
