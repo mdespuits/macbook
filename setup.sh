@@ -16,7 +16,7 @@ sudo chown -R `whoami` /usr/local
 # sudo installer -pkg GCC-10.7-v2.pkg -target /
 
 # Use Librarian to install proper cookbooks
-bundle exec librarian-chef install --clean
+bundle exec librarian-chef install
 
 # Run Chef Solo!
 bundle exec chef-solo -c config/solo.rb -j config/node.json
