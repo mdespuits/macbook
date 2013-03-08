@@ -8,15 +8,13 @@ end
 whoami = `whoami`.chomp
 options = {
   verbose: false,
-  reload: false
+  reload: ''
 }
-verbose = false
-reload = ''
 
 require 'optparse'
 optparser = OptionParser.new do |opt|
-  opt.on "-c", "--cookbooks" do
-    options[:reload] = ' --clean'
+  opt.on "-c", "--clean" do
+    options[:reload] = '--clean'
   end
 
   opt.on "-v", "--[no]-verbose" do |v|
@@ -51,7 +49,7 @@ rescue => e
 end
 
 begin
-  run "librarian-chef install #{reload}"
+  run "librarian-chef install #{options[:clean]}"
   run "chef-solo -c config/solo.rb -j config/node.json"
 rescue => e
   puts e.message
