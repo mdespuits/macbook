@@ -3,6 +3,8 @@ include_recipe "homebrew"
 include_recipe "dmg"
 include_recipe "zip_app"
 
+homebrew_tap "homebrew/dupes"
+
 node["packages"].each do |package_name|
   package package_name do
     provider Chef::Provider::Package::Homebrew

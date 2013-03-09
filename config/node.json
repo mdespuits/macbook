@@ -62,6 +62,7 @@
   ],
   "packages": [
     "ack",
+    "apple-gcc42",
     "cloc",
     "bash-completion",
     "git",

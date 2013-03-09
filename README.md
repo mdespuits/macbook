@@ -17,6 +17,7 @@ If you are not using Homebrew for your package management on a Mac, you're doing
 
 ### What brews do I get?
 
+* apple-gcc42 (homebrew/dupes)
 * Git
 * Ack
 * Cloc
