@@ -54,7 +54,7 @@ end
 
 def run_librarian_and_chef
   run "librarian-chef install #{$options[:clean]}"
-  run "chef-solo -c config/solo.rb -j config/node.json"
+  run "chef-solo -c config/solo.rb"
 rescue => e
   puts e.message
   exit 1
