@@ -28,7 +28,6 @@ def install_and_run_bundler
   run "bundle"
 rescue => e
   puts e.message
-  exit 1
 end
 
 def prepare_for_homebrew
@@ -36,7 +35,6 @@ def prepare_for_homebrew
   run "sudo chown -R #{`whoami`.chomp} /usr/local"
 rescue => e
   puts e.message
-  exit 1
 end
 
 def install_gcc_for_mac_os_x
@@ -46,7 +44,6 @@ def install_gcc_for_mac_os_x
   run "sudo installer -pkg GCC-10.7-v2.pkg -target /"
 rescue => e
   puts e.message
-  exit 1
 ensure
   require 'fileutils'
   FileUtils.rm_rf "GCC-10.7-v2.pkg"
@@ -57,7 +54,6 @@ def run_librarian_and_chef
   run "chef-solo -c config/solo.rb"
 rescue => e
   puts e.message
-  exit 1
 end
 
 install_and_run_bundler
