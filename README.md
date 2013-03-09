@@ -28,8 +28,8 @@ If you are not using Homebrew for your package management on a Mac, you're doing
 * rbenv-vars
 * ruby-build
 * Redis
-* `tree`
-* `the_silver_searcher` (e.g. `ag`)
+* tree
+* the_silver_searcher (a.k.a ag)
 * tmux
 * zsh
 
