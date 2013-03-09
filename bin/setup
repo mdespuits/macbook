@@ -8,13 +8,13 @@ end
 
 $options = {
   verbose: false,
-  reload: ''
+  clean: ''
 }
 
 require 'optparse'
 optparser = OptionParser.new do |opt|
   opt.on "-c", "--clean" do
-    $options[:reload] = '--clean'
+    $options[:clean] = '--clean'
   end
 
   opt.on "-v", "--[no]-verbose" do |v|
