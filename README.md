@@ -39,17 +39,17 @@ Some apps that will be installed right away:
 
 * Alfred
 * Sublime Text 2
-* Skype.app
+* Skype
 * iTerm2
 * BetterSnapTool
 * Postgres.app
 * Github.app
-* Induction.app
+* Induction
 * Jing
 * Google Chrome
 * Google Drive
 * Firefox
-* Mou.app
+* Mou
 * VLC
 * VirtualBox
 
