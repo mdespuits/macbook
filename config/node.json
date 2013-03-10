@@ -15,7 +15,7 @@
       "source": "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"
     },
     { "app":   "VLC",
-      "source": "http://sourceforge.net/projects/vlc/files/latest/download"
+      "source": "http://sourceforge.net/projects/vlc/files/2.0.5/macosx/vlc-2.0.5.dmg/download"
     },
     { "app":   "Google Chrome",
       "dmg_name": "googlechrome",
