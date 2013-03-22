@@ -6,6 +6,40 @@
     "recipe[zip_app]",
     "recipe[mac-setup]"
   ],
+  "gists": [
+    // Put Gists here!
+  ],
+  "repos": [
+    { "path": "~/code/personal/other",
+      "repos": [
+        "mattdbridges/capistrano-recipes"
+      ]
+    },
+    { "path": "~/code/other-projects",
+      "repos": [
+        "mattdbridges/mcheyne-bible-app",
+        "gabetax/twitter-bootstrap-kaminari-views"
+      ]
+    },
+    { "path": "~/code/open-source/javascript",
+      "repos": [
+        "twitter/bootstrap",
+        "simsalabim/sisyphus",
+        "visionmedia/mocha",
+        "xing/wysihtml5"
+      ]
+    },
+    { "path": "~/code/open-source/gems",
+      "repos": [
+        "mattdbridges/dotify",
+        "mattdbridges/validates_formatting_of",
+        "EmmanuelOga/ffaker",
+        "kevinjalbert/git_statistics",
+        "guard/guard-pow",
+        "github/linguist"
+      ]
+    }
+  ],
   "dmg_apps": [
     { "app":   "Skype",
       "source": "http://www.skype.com/go/getskype-macosx.dmg"
