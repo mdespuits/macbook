@@ -69,8 +69,8 @@
     }
   ],
   "zip_apps": [
-    { "name":   "Alfred",
-      "source": "http://cachefly.alfredapp.com/Alfred_2.0.1_173.zip"
+    { "name":   "Alfred 2",
+      "source": "http://cachefly.alfredapp.com/Alfred_2.0.2_178.zip"
     },
     { "name":   "iTerm",
       "source": "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"
