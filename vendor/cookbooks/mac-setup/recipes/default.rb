@@ -24,6 +24,7 @@ ZipApps = [
 ]
 
 DmgApps = [
+  OpenStruct.new( app: "Vagrant", source: "http://files.vagrantup.com/packages/87613ec9392d4660ffcb1d5755307136c06af08c/Vagrant.dmg", type: "pkg"),
   OpenStruct.new( app: "Skype", source: "http://www.skype.com/go/getskype-macosx.dmg"),
   OpenStruct.new( app: "VLC", source: "http://sourceforge.net/projects/vlc/files/2.0.5/macosx/vlc-2.0.5.dmg/download"),
   OpenStruct.new( app: "Sublime Text 2", dmg_name: "sublimetext2", source: "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"),

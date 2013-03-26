@@ -52,6 +52,7 @@ Some apps that will be installed right away:
 * Firefox
 * Mou
 * VLC
+* Vagrant
 * VirtualBox
 
 #### Note:
