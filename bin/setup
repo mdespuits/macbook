@@ -1,62 +1,58 @@
 #!/usr/bin/env ruby
 
-def run(cmd)
-  cmd.strip!
-  puts "==> #{cmd}"
-  system cmd
-end
+require 'optparse'
+require 'thread'
 
-$options = {
+base_opts = {
   verbose: false,
   clean: ''
 }
 
-require 'optparse'
-optparser = OptionParser.new do |opt|
+OptionParser.new do |opt|
   opt.on "-c", "--clean" do
-    $options[:clean] = '--clean'
+    base_opts[:clean] = '--clean'
   end
 
   opt.on "-v", "--[no]-verbose" do |v|
-    $options[:verbose] = v
+    base_opts[:verbose] = v
   end
-end
-optparser.parse!
+end.parse!
 
-def install_and_run_bundler
-  run "gem install bundler"
-  run "bundle"
-rescue => e
-  puts e.message
-end
+class Ladder
 
-def prepare_for_homebrew
-  run "sudo mkdir -p /usr/local"
-  run "sudo chown -R #{`whoami`.chomp} /usr/local"
-rescue => e
-  puts e.message
-end
+  attr_reader :options
 
-def install_gcc_for_mac_os_x
-  run "mkdir -p ~/tmp"
-  run "cd ~/tmp"
-  run "curl https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg > GCC-10.7-v2.pkg"
-  run "sudo installer -pkg GCC-10.7-v2.pkg -target /"
-rescue => e
-  puts e.message
-ensure
-  require 'fileutils'
-  FileUtils.rm_rf "GCC-10.7-v2.pkg"
+  def initialize(options)
+    @options = options
+    @steps = []
+  end
+
+  def do(name, &block)
+    instance_eval &block
+  end
+
+  def execute(cmd)
+    cmd.strip!
+    puts "==> #{cmd}"
+    system cmd
+  end
+
 end
 
-def run_librarian_and_chef
-  run "librarian-chef install #{$options[:clean]}"
-  run "chef-solo -c config/solo.rb"
-rescue => e
-  puts e.message
+Setup = Ladder.new(base_opts)
+
+Setup.do :install_and_execute_bundler do
+  execute "gem install bundler"
+  execute "bundle"
 end
 
-install_and_run_bundler
-prepare_for_homebrew
-install_gcc_for_mac_os_x
-run_librarian_and_chef
+Setup.do :prepare_for_homebrew do
+  execute "sudo -v"
+  execute "sudo mkdir -p /usr/local"
+  execute "sudo chown -R #{`whoami`.chomp} /usr/local"
+end
+
+Setup.do :execute_librarian_and_chef do
+  execute "librarian-chef install #{options[:clean]}"
+  execute "chef-solo -c config/solo.rb"
+end
