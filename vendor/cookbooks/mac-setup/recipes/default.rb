@@ -5,9 +5,7 @@ include_recipe "homebrew"
 include_recipe "dmg"
 include_recipe "zip_app"
 
-homebrew_tap "homebrew/dupes"
-
-Packages = ["ack", "apple-gcc42", "cloc", "bash-completion",
+Packages = ["ack", "cloc", "bash-completion",
             "git", "hub", "macvim", "memcached", "node", "rbenv",
             "rbenv-vars", "ruby-build", "redis", "tree",
             "the_silver_searcher", "tmux", "zsh"]
