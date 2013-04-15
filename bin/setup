@@ -3,8 +3,8 @@
 require 'optparse'
 
 base_opts = {
-  verbose: false,
-  clean: ''
+  :verbose => false,
+  :clean => ''
 }
 
 OptionParser.new do |opt|
