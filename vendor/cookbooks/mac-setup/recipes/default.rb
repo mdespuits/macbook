@@ -5,10 +5,10 @@ include_recipe "homebrew"
 include_recipe "dmg"
 include_recipe "zip_app"
 
-Packages = ["ack", "cloc", "bash-completion",
-            "git", "hub", "macvim", "memcached", "node", "rbenv",
-            "rbenv-vars", "ruby-build", "redis", "tree",
-            "the_silver_searcher", "tmux", "zsh"]
+Packages = ["ack", "cloc", "bash-completion", "elasticsearch", "heroku-toolbelt",
+            "git", "hub", "macvim", "memcached", "node", "phantomjs", "pstree",
+            "rbenv", "rbenv-vars", "ruby-build", "redis", "tree", "go",
+            "the_silver_searcher", "tmux", "wget", "zsh"]
 
 ZipApps = [
   OpenStruct.new( name: "Alfred", source: "http://cachefly.alfredapp.com/Alfred_2.0.1_173.zip"),
