@@ -11,7 +11,7 @@ Packages = ["ack", "cloc", "bash-completion", "elasticsearch", "heroku-toolbelt"
             "the_silver_searcher", "tmux", "wget", "zsh"]
 
 ZipApps = [
-  OpenStruct.new( name: "Alfred", source: "http://cachefly.alfredapp.com/Alfred_2.0.1_173.zip"),
+  OpenStruct.new( name: "Alfred 2", source: "http://cachefly.alfredapp.com/Alfred_2.0.3_187.zip"),
   OpenStruct.new( name: "iTerm", source: "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"),
   OpenStruct.new( name: "BetterSnapTool", source: "http://boastr.de/BetterSnapToolTrial.zip"),
   OpenStruct.new( name: "Postgres", source: "http://postgresapp.com/download"),
