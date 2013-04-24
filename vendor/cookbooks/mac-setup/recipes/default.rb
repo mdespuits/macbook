@@ -32,7 +32,7 @@ DmgApps = [
   OpenStruct.new( app: "Jing", source: "http://download.techsmith.com/jing/mac/jing.dmg", "accept_eula" => true),
 ]
 
-# Repositories = [
+Repositories = [
 #   OpenStruct.new( path: "~/code/personal/other", url: "mattdbridges/capistrano-recipes" ),
 #   OpenStruct.new( path: "~/code/personal/gems", url: "mattdbridges/dotify" ),
 #   OpenStruct.new( path: "~/code/personal/gems", url: "mattdbridges/validates_formatting_of" ),
@@ -46,7 +46,7 @@ DmgApps = [
 #   OpenStruct.new( path: "~/code/open-source/gems", url: "kevinjalbert/git_statistics" ),
 #   OpenStruct.new( path: "~/code/open-source/gems", url: "guard/guard-pow" ),
 #   OpenStruct.new( path: "~/code/open-source/gems", url: "github/linguist" ),
-# ]
+]
 
 
 #######################################################
