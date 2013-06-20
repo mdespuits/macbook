@@ -55,3 +55,9 @@ Setup.do :execute_librarian_and_chef do
   execute "librarian-chef install #{options[:clean]}"
   execute "chef-solo -c config/solo.rb"
 end
+
+Setup.do :install_dotfiles do
+  execute "mkdir -p ~/code/dotfiles"
+  execute "git clone https://github.com/mattdbridges/dotfiles ~/code/dotfiles"
+  execute "cd ~/code/dotfiles && ./install.sh"
+end
