@@ -26,7 +26,7 @@ class Ladder
     @steps = []
   end
 
-  def do(name, &block)
+  def commands(name, &block)
     instance_eval &block
   end
 
@@ -40,23 +40,23 @@ end
 
 Setup = Ladder.new(base_opts)
 
-Setup.do :install_and_execute_bundler do
+Setup.commands :install_and_execute_bundler do
   execute "gem install bundler"
   execute "bundle"
 end
 
-Setup.do :prepare_for_homebrew do
+Setup.commands :prepare_for_homebrew do
   execute "sudo -v"
   execute "sudo mkdir -p /usr/local"
   execute "sudo chown -R #{`whoami`.chomp} /usr/local"
 end
 
-Setup.do :execute_librarian_and_chef do
+Setup.commands :execute_librarian_and_chef do
   execute "librarian-chef install #{options[:clean]}"
   execute "chef-solo -c config/solo.rb"
 end
 
-Setup.do :install_dotfiles do
+Setup.commands :install_dotfiles do
   execute "mkdir -p ~/code/dotfiles"
   execute "git clone https://github.com/mattdbridges/dotfiles ~/code/dotfiles"
   execute "cd ~/code/dotfiles && ./install.sh"
