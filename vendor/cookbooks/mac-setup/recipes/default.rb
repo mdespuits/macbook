@@ -10,26 +10,25 @@ Packages = ["ack", "cloc", "bash-completion", "elasticsearch", "heroku-toolbelt"
             "rbenv", "rbenv-vars", "ruby-build", "redis", "tree", "go",
             "the_silver_searcher", "tmux", "wget", "zsh"]
 
-ZipApps = [
-  OpenStruct.new( name: "Alfred 2", source: "http://cachefly.alfredapp.com/Alfred_2.0.3_187.zip"),
-  OpenStruct.new( name: "iTerm", source: "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"),
-  OpenStruct.new( name: "BetterSnapTool", source: "http://boastr.de/BetterSnapToolTrial.zip"),
-  OpenStruct.new( name: "Postgres", source: "http://postgresapp.com/download"),
-  OpenStruct.new( name: "Github", source: "https://central.github.com/mac/latest"),
-  OpenStruct.new( name: "Induction", source: "http://inductionapp.com/download"),
-  OpenStruct.new( name: "Firefox", source: "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"),
-  OpenStruct.new( name: "Mou", source: "http://mouapp.com/download/Mou.zip")
-]
+ZipApps = []
+ZipApps << OpenStruct.new( name: "Alfred 2", source: "http://cachefly.alfredapp.com/Alfred_2.0.3_187.zip")
+ZipApps << OpenStruct.new( name: "iTerm", source: "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip")
+ZipApps << OpenStruct.new( name: "BetterSnapTool", source: "http://boastr.de/BetterSnapToolTrial.zip")
+ZipApps << OpenStruct.new( name: "Postgres", source: "http://postgresapp.com/download")
+# ZipApps << OpenStruct.new( name: "Github", source: "https://central.github.com/mac/latest")
+# ZipApps << OpenStruct.new( name: "Induction", source: "http://inductionapp.com/download")
+ZipApps << OpenStruct.new( name: "Firefox", source: "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"),
+# ZipApps << OpenStruct.new( name: "Mou", source: "http://mouapp.com/download/Mou.zip"
 
   # OpenStruct.new( app: "Vagrant", source: "http://files.vagrantup.com/packages/87613ec9392d4660ffcb1d5755307136c06af08c/Vagrant.dmg", type: "pkg"),
-DmgApps = [
-  OpenStruct.new( app: "Skype", source: "http://www.skype.com/go/getskype-macosx.dmg"),
-  OpenStruct.new( app: "VLC", source: "http://sourceforge.net/projects/vlc/files/2.0.5/macosx/vlc-2.0.5.dmg/download"),
-  OpenStruct.new( app: "Sublime Text 2", dmg_name: "sublimetext2", source: "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"),
-  OpenStruct.new( app: "Google Chrome", dmg_name: "googlechrome", source: "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"),
-  OpenStruct.new( app: "Google Drive", dmg_name: "googledrive", source: "http://dl.google.com/drive/installgoogledrive.dmg"),
-  OpenStruct.new( app: "Virtualbox", source: "http://dlc.sun.com.edgesuite.net/virtualbox/4.0.8/VirtualBox-4.0.8-71778-OSX.dmg", type: "mpkg"),
-  OpenStruct.new( app: "Jing", source: "http://download.techsmith.com/jing/mac/jing.dmg", "accept_eula" => true),
+DmgApps = []
+DmgApps << OpenStruct.new( app: "Skype", source: "http://www.skype.com/go/getskype-macosx.dmg")
+DmgApps << OpenStruct.new( app: "VLC", source: "http://sourceforge.net/projects/vlc/files/2.0.5/macosx/vlc-2.0.5.dmg/download")
+DmgApps << OpenStruct.new( app: "Sublime Text 2", dmg_name: "sublimetext2", source: "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg")
+# DmgApps << OpenStruct.new( app: "Google Chrome", dmg_name: "googlechrome", source: "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg")
+# DmgApps << OpenStruct.new( app: "Google Drive", dmg_name: "googledrive", source: "http://dl.google.com/drive/installgoogledrive.dmg")
+DmgApps << OpenStruct.new( app: "Virtualbox", source: "http://dlc.sun.com.edgesuite.net/virtualbox/4.0.8/VirtualBox-4.0.8-71778-OSX.dmg", type: "mpkg")
+DmgApps << OpenStruct.new( app: "Jing", source: "http://download.techsmith.com/jing/mac/jing.dmg", "accept_eula" => true)
 ]
 
 Repositories = [
