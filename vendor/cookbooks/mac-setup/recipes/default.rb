@@ -15,6 +15,7 @@ ZipApps << OpenStruct.new( name: "Alfred 2", source: "http://cachefly.alfredapp.
 ZipApps << OpenStruct.new( name: "iTerm", source: "http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip")
 ZipApps << OpenStruct.new( name: "BetterSnapTool", source: "http://boastr.de/BetterSnapToolTrial.zip")
 ZipApps << OpenStruct.new( name: "Postgres", source: "http://postgresapp.com/download")
+ZipApps << OpenStruct.new( name: "Fluid", source: "http://fluidapp.com/dist/Fluid_1.7.1.zip")
 # ZipApps << OpenStruct.new( name: "Github", source: "https://central.github.com/mac/latest")
 # ZipApps << OpenStruct.new( name: "Induction", source: "http://inductionapp.com/download")
 ZipApps << OpenStruct.new( name: "Firefox", source: "https://download.mozilla.org/?product=firefox-19.0.2&os=osx&lang=en-US"),

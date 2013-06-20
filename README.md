@@ -44,6 +44,7 @@ Some apps that will be installed right away:
 * iTerm2
 * BetterSnapTool
 * Postgres.app
+* Fluid.app
 * Github.app
 * Induction
 * Jing
